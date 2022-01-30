@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <title>Tic-Tac-Toe</title>
+</head>
+<body>
+    <header></header>
+    <main>
+        <div id="content">
+            <h1>Welcome to Tic-Tac-Toe</h1>
+            <h2 id="i-go">You lost the coin toss, I go first...</h2>
+            <h2 id="you-go">You won the coin toss, you go first...</h2>
+            <button class="toggle-mode-button" onclick="darkModeToggle()">Dark Mode</button>
+            <div id="retry">
+                <h2 id="you-won">You won the game, let's play again!</h2>
+                <h2 id="i-won">I won the game, better luck next time!</h2>
+                <h2 id="cat">It was a draw, CAT!</h2>
+                <button id="retry-button" onclick="displayCoinToss()">Play Again</button>
+            </div>
+            <div id="coin-toss-container">
+                <img src="./assets/animations/coin-tossing.gif" alt="an animation of a rotating coin" id="coin-tossing">
+                <div id="coin-toss-button-container">
+                    <button class="coin-toss-button" onclick="tossCoin('heads')">
+                        <h2>Heads</h2>
+                    </button>
+                    <button class="coin-toss-button" onclick="tossCoin('tails')">
+                        <h2>Tails</h2>
+                    </button>
+                </div>
+            </div>
+            <div id="ttt-container">
+                <div id="top-left" class="square" onclick="playGame('top-left')">
+                    <img id="one-o" class="square-image o" src="./assets/images/o.png" alt="circle">
+                    <img id="one-x" class="square-image x" src="./assets/images/x.png" alt="circle">
+                </div>
+                <div id="top-middle" class="square" onclick="playGame('top-middle')">
+                    <img id="two-o" class="square-image o" src="./assets/images/o.png" alt="circle">
+                    <img id="two-x" class="square-image x" src="./assets/images/x.png" alt="an x">
+                </div>
+                <div id="top-right" class="square" onclick="playGame('top-right')">
+                    <img id="three-o" class="square-image o" src="./assets/images/o.png" alt="circle">
+                    <img id="three-x" class="square-image x" src="./assets/images/x.png" alt="an x">
+                </div>
+                <div id="middle-left" class="square" onclick="playGame('middle-left')">
+                    <img id="four-o" class="square-image o" src="./assets/images/o.png" alt="circle">
+                    <img id="four-x" class="square-image x" src="./assets/images/x.png" alt="an x">
+                </div>
+                <div id="middle-middle" class="square" onclick="playGame('middle-middle')">
+                    <img id="five-o" class="square-image o" src="./assets/images/o.png" alt="circle">
+                    <img id="five-x" class="square-image x" src="./assets/images/x.png" alt="an x">
+                </div>
+                <div id="middle-right" class="square" onclick="playGame('middle-right')">
+                    <img id="six-o" class="square-image o" src="./assets/images/o.png" alt="circle">
+                    <img id="six-x" class="square-image x" src="./assets/images/x.png" alt="an x">
+                </div>
+                <div id="bottom-left" class="square" onclick="playGame('bottom-left')">
+                    <img id="seven-o" class="square-image o" src="./assets/images/o.png" alt="circle">
+                    <img id="seven-x" class="square-image x" src="./assets/images/x.png" alt="an x">
+                </div>
+                <div id="bottom-middle" class="square" onclick="playGame('bottom-middle')">
+                    <img id="eight-o" class="square-image o" src="./assets/images/o.png" alt="circle">
+                    <img id="eight-x" class="square-image x" src="./assets/images/x.png" alt="an x">
+                </div>
+                <div id="bottom-right" class="square" onclick="playGame('bottom-right')">
+                    <img id="nine-o" class="square-image o" src="./assets/images/o.png" alt="circle">
+                    <img id="nine-x" class="square-image x" src="./assets/images/x.png" alt="an x">
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer></footer>
+</body>
+<script src="./javascript/gamePlay.js"></script>
+<script src="./javascript/darkModeToggle.js"></script>
+<script src="./javascript/displayCoinToss.js"></script>
+</html>
